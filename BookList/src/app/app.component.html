@@ -1,0 +1,74 @@
+<div class="container-fluid">
+
+  <div class="row flex-nowrap">
+    <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light">
+      <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+        <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-decoration-none">
+          <i class="fa fa-bars" aria-hidden="true"></i> <span class="ms-1 d-none d-sm-inline">Menu</span>
+        </a>
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+
+          <li>
+            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+              <i class="fa fa-list-alt" aria-hidden="true"></i> <span
+                class="ms-1 d-none d-sm-inline  text-uppercase">Content management</span> </a>
+
+          </li>
+          <li>
+            <a href="#" class="nav-link px-0 align-middle">
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i> <span
+                class="ms-1 d-none d-sm-inline  text-uppercase">courses</span></a>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="col py-3 ">
+      <div class="lognav"><img src="../assets/logo.png" height="40" />
+        <h3 class="title">atom</h3>
+      </div>
+      <div class="row  mt-10">
+        <div class="col-sm-6">
+          <h1>Books</h1>
+        </div>
+        <div class="col-sm-6">
+          <button type="button" class="float-end btn btn-sm btn-primary">Create New books</button>
+        </div>
+
+      </div>
+      <div class="row mt-20">
+        <!-- Actual search box -->
+        <div class="form-group has-search col-sm-6">
+          <span class="fa fa-search form-control-feedback"></span>
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+      </div>
+      <div class="row mt-10 pt">
+        <h4 class="smallTitle">All Books</h4>
+        <div class="col-sm-6 mt-5" *ngFor="let books of bookList">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{books.volumeInfo.title}}</h5>
+              <p class="card-text">Authors: {{books.volumeInfo.authors[0]}}</p>
+              <p class="card-text">publisher: {{books.volumeInfo.publisher}}</p>
+              <p class="card-text">publishedDate: {{books.volumeInfo.publishedDate}}</p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+  </div>
+
+</div>
